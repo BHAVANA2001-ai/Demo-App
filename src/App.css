@@ -8,6 +8,8 @@
     
 }
 
+/* BUTTON */
+
 button{
     background-color: #e26715; /* Bright, eye-catching color */
     padding: 10px 20px;
@@ -21,20 +23,34 @@ button{
     display: inline-block;
 }
 
+
+/* HEADER */
+
 header{
     width: 100%;
-    background-color: #50667A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
-    padding: 10px 100px 0px 100px;
     
+    transition: background-color 0.3s ease-in-out;
 }
+
 
 .header-container{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 150px;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.scrolled {
+    background-color: #71898F !important;
+    width: 100%;
 }
 
 .logo{
@@ -54,4 +70,56 @@ header{
     text-decoration: none;
     font-weight: 400;
     font-size: 20px;
+}
+
+
+
+
+/* HERO */
+
+.hero-section{
+    background-image: url("./Assets/hero.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    top: 0;
+   
+}
+
+.hero-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content{
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    max-width: 700px; 
+
+}
+.hero-title, .hero-desc {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title, .hero-desc{
+    padding: 10px;
+}
+
+.hero-title{
+    font-size: 35px;
+}
+.hero-desc{
+    font-size: 16px;
+    line-height: 1.5;
 }

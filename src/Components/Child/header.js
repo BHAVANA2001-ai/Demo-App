@@ -1,15 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from './Button';
 import Data from '../../data.json'
 
-const header = (props) => {
+const Header = (props) => {
     const data = props.data
-
     const button = Data.filter((item) => item.id === 0)
+
+
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        setScrolled(window.scrollY > 900);    //background color should be changed after 900px;
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      return() => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+
+   
   return (
     <>
       {data.map((getData) => (
-        <div className = 'header-container'>
+           <div className={`header-container ${scrolled ? "scrolled" : "hero-bg"}`}  >
            <img src = {getData.logo} alt = {getData.alt} className='logo'/>
             <nav className='header-list'>
                 <ul>
@@ -29,4 +43,4 @@ const header = (props) => {
   )
 }
 
-export default header
+export default Header
