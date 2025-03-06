@@ -1,10 +1,15 @@
 import React from 'react'
 
-const Button = () => {
-  return (
-    <div>
-      <button> Contact </button>
-    </div>
+const Button = (props) => {
+  const data = props.data;
+
+
+  return(
+    <>
+    {data.map((getData) => (
+      <button>{getData.button}</button>
+    ))}
+    </>
   )
 }
 

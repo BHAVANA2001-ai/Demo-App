@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Button from './Button';
 import Data from '../../data.json'
+import { HashLink as Link } from "react-router-hash-link";
+
 
 const Header = (props) => {
     const data = props.data
@@ -11,7 +13,7 @@ const Header = (props) => {
 
     useEffect(() => {
       const handleScroll = () => {
-        setScrolled(window.scrollY > 900);    //background color should be changed after 900px;
+        setScrolled(window.scrollY > 700);    //background color should be changed after 900px;
       }
 
       window.addEventListener("scroll", handleScroll);
@@ -27,15 +29,15 @@ const Header = (props) => {
            <img src = {getData.logo} alt = {getData.alt} className='logo'/>
             <nav className='header-list'>
                 <ul>
-                <li> <a href = "#home"> About Us </a></li>
-                    <li><a href = "#features"> Features </a></li>
-                    <li><a href = "#services"> Services </a></li>
-                    <li><a href = "#visuals"> Visual Highlights </a></li>
+                <li> <Link smooth to = "#about-us"> About Us </Link></li>
+                <li> <Link smooth to = "#features"> Features </Link></li>
+                <li> <Link smooth to = "#specifications"> Specifications </Link></li> 
+                <li> <Link smooth to="#visual-highlights">Visual Highlights</Link> </li>
                 </ul>
             </nav>
-
-            <Button data = {button}/>
-
+            
+            <Link smooth to = "#form"> <Button data = {button}/> </Link>
+            
         </div>
         
       ))}
