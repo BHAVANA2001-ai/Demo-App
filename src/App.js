@@ -8,21 +8,35 @@ import Carousel from './Components/Parent/Carousel';
 import Accordion from './Components/Parent/Accordion';
 import Grid from './Components/Parent/Grid';
 import Form from './Components/Parent/Form';
+import Table from './Components/Parent/Table';
+
+import CarouselTheme from './Components/Child/CarouselTheme';
+
 
 
 function App() {
+
+  
   return (
     <Router>
-    <div className="App">
-      <Header/>
-      <Hero/>
-      <Tab/>
-      <Card/>
-      <Carousel/>
-      <Accordion/>
-      <Grid/>
-      <Form />
-    </div>
+    <Routes>
+    <Route path = "/" element = {
+      <div className='App'>
+        <Header />
+        <Hero />
+        <Tab />
+        <Card />
+        <Carousel />
+        <Accordion />
+        <Grid />
+        <Form />
+        <CarouselTheme />
+      </div>
+    }/>
+
+      <Route path = "/table" element = {<Table />}/>
+
+    </Routes>
     </Router>
   );
   

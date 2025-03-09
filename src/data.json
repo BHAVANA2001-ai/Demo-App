@@ -219,6 +219,91 @@
     {
         "id": 9,
         "title": "Contact Us!"
+    },
+    {
+        "id": 10,
+        "title": "User's Data!"
+    },
+
+
+   
+    {
+      "id": 11,
+      "themes": [
+        {
+          "id": 1,
+          "name": "construction",
+          "images": [
+            {
+              "id": 1,
+              "image": "/assets/construction1.jpg",
+              "title": "Building Progress",
+              "description": "Ongoing site construction."
+            },
+            {
+              "id": 2,
+              "image": "/assets/construction2.jpg",
+              "title": "Safety First",
+              "description": "Workers with protective gear."
+            },
+            {
+              "id": 3,
+              "image": "/assets/construction3.jpg",
+              "title": "Heavy Machinery",
+              "description": "Cranes lifting materials."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "architecture",
+          "images": [
+            {
+              "id": 1,
+              "image": "/assets/architecture1.jpg",
+              "title": "Modern Design",
+              "description": "A sleek architectural structure."
+            },
+            {
+              "id": 2,
+              "image": "/assets/architecture2.jpg",
+              "title": "Historical Charm",
+              "description": "Blending old and new styles."
+            },
+            {
+              "id": 3,
+              "image": "/assets/architecture3.jpg",
+              "title": "Urban Skyline",
+              "description": "Cityscape with creative buildings."
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "interior",
+          "images": [
+            {
+              "id": 1,
+              "image": "/assets/interior1.jpg",
+              "title": "Cozy Living Room",
+              "description": "Minimalist interior decor."
+            },
+            {
+              "id": 2,
+              "image": "/assets/interior2.jpg",
+              "title": "Luxury Bedroom",
+              "description": "Elegant bedroom with soft lighting."
+            },
+            {
+              "id": 3,
+              "image": "/assets/interior3.jpg",
+              "title": "Kitchen Aesthetics",
+              "description": "Modern kitchen with stylish decor."
+            }
+          ]
+        }
+      ]
     }
+    
     
 ]
